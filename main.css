@@ -65,14 +65,14 @@ body{
 #logoHome{
     height: 18px;
     width: 18px;
-    padding-top: 2px;
-    padding-bottom: 43px;
+    padding-top: 15px;
+    padding-bottom: 30px;
     padding-right: 11px;
 }
 #logoPhone{
     height: 18px;
     width: 18px;
-    padding-bottom: 18px;
+    padding-bottom: 17px;
 }
 #logoEmail{
     height: 18px;
