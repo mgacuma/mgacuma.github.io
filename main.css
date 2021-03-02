@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #FFA47D;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 720px;
+}
+
+.content .card{
+    position: relative;
+    width: 525px;
+    height: 300px; 
+    transform-style: preserve-3d;
+    transition: 1s ease;
+    border-radius: 30px;
+}
+
+.content .card .cardFront,
+.content .card .cardBack{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    //background: #DBDBDB;
+    background-color: #e7eff9;
+    background-image: linear-gradient(135deg, #e7eff9 45%, #a4adbf 100%);
+}
+
+.content .card .cardFront{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content .card .cardFront .contentFront{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.content .card .cardFront img{
+    width:215px;
+    height:215px;
+}
+
+.logos{
+    display: flex;
+    flex-direction: column;
+}
+
+#logoHome{
+    height: 18px;
+    width: 18px;
+    padding-top: 2px;
+    padding-bottom: 43px;
+    padding-right: 11px;
+}
+#logoPhone{
+    height: 18px;
+    width: 18px;
+    padding-bottom: 18px;
+}
+#logoEmail{
+    height: 18px;
+    width: 18px;
+    padding-bottom: 20px;
+}
+
+#name{
+    margin: 0px 0 0;
+    
+}
+#occupation{
+    margin: 0px 0 0;
+    padding-bottom: 20px;
+}
+
+.content .card .cardFront .info{
+    display: flex;
+    font-size: 16px;
+}
+
+.content .card .cardFront #address2{
+    padding-bottom: 10px;
+}
+
+.content .card .cardFront #phoneNumber{
+    padding-bottom: 10px;
+}
+
+.content .card .cardFront #email{
+    padding-bottom: 10px;
+}
+
+.content .card .cardBack{
+    background-color: #e7eff9;
+    background-image: linear-gradient(225deg, #e7eff9 45%, #a4adbf 100%);
+}
+
+.content:hover .card{
+    transform: rotateY(180deg);
+}
+
+.content .card .cardBack{
+    transform: rotateY(180deg);
+}
+
+
+
