@@ -13,13 +13,13 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
 }) => {
   return (
     <li>
-      <label className={todo.complete ? "complete" : undefined}>
+      <label className={todo.completed ? "completed" : undefined}>
+        {todo.id+'. '}{todo.text}
         <input
           type="checkbox"
           onChange={() => toggleComplete(todo)}
-          checked={todo.complete}
+          checked={todo.completed}
         />
-        {todo.text}
       </label>
     </li>
   );
