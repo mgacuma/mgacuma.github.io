@@ -1,9 +1,12 @@
-import { Todo } from "../Components/TodoList/Todo";
+
 import axios from 'axios'
 
 export async function getAllTodos() {
     try{
-        const response = await fetch('http://localhost:4000/todos/');
+        const response = await fetch('https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/get-todos', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'}
+        });
         return await response.json();
     }catch(error) {
         return [];
@@ -12,7 +15,7 @@ export async function getAllTodos() {
 
 export async function addNewTodo(todo: {text: string, completed: boolean}){
     try{
-        const response = await fetch('http://localhost:4000/todos/new-todo', {
+        const response = await fetch('https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/new-todo', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(todo)
@@ -25,7 +28,7 @@ export async function addNewTodo(todo: {text: string, completed: boolean}){
 
 export async function toggleTodo(todo: Todo){
     try{
-        const response = await fetch(`http://localhost:4000/todos/toggle-todo`, {
+        const response = await fetch(`https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/toggle-todo`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(todo)
@@ -39,19 +42,14 @@ export async function toggleTodo(todo: Todo){
 export async function deleteCompleted(todos: Todo[]){
     try{
         const completedTodos = todos.filter(todo => todo.completed).map(todo => todo.id)
-
-        console.log('ping')
         await axios({
             method: 'post',
-            url: `http://localhost:4000/todos/delete-todos`, 
+            url: `https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/delete-todos`, 
             data: completedTodos,
             headers: {'Content-Type': 'application/json'},    
-        })
-        console.log('pong')
+        });
 
-        const response = await fetch('http://localhost:4000/todos/');
-        console.log(response, 'resss')
-        return await response.json();
+        return await getAllTodos()
     }catch(error){
         
     }
