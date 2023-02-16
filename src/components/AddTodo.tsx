@@ -3,7 +3,7 @@ import React from "react";
 
 interface AddTodoProps {
   inputValue: string;
-  onInputChange: (event: any) => void;
+  onInputChange: (event: React.SyntheticEvent) => void;
   onInputKeyPress: (event: any) => boolean;
   onButtonClick: () => void;
 }
@@ -14,11 +14,12 @@ const AddTodo: React.FC<AddTodoProps> = React.memo(
       <Grid container>
         <Grid xs={10} md={11} item style={{ paddingRight: 16 }}>
           <TextField
-            placeholder="Add Todo here"
+            placeholder="Add todo..."
             value={inputValue}
             onChange={onInputChange}
             onKeyPress={onInputKeyPress}
             fullWidth
+            size="small"
           />
         </Grid>
         <Grid xs={2} md={1} item>

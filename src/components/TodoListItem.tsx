@@ -1,20 +1,20 @@
 import { DeleteOutlined } from "@mui/icons-material";
 import { ListItem, Checkbox, ListItemText, ListItemSecondaryAction, IconButton } from "@mui/material";
 import React from "react";
+import { Todo } from "../Todo.type";
 
 interface TodoListItemProps {
-  text: string;
+  todo: Todo;
   divider: boolean;
-  completed: boolean;
   onCheckBoxToggle: () => void;
   onButtonClick: () => void;
 }
 
 const TodoListItem: React.FC<TodoListItemProps> = React.memo(
-  ({ text, divider, completed, onCheckBoxToggle, onButtonClick }) => (
+  ({ todo, divider, onCheckBoxToggle, onButtonClick }) => (
     <ListItem divider={divider}>
-      <Checkbox onClick={onCheckBoxToggle} checked={completed} disableRipple />
-      <ListItemText primary={text} />
+      <Checkbox onClick={onCheckBoxToggle} checked={todo.completed} disableRipple />
+      <ListItemText primary={todo.text} />
       <ListItemSecondaryAction>
         <IconButton aria-label="Delete Todo" onClick={onButtonClick}>
           <DeleteOutlined />

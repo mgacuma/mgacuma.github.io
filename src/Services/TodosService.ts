@@ -1,57 +1,62 @@
 
-import axios from 'axios'
+import axios, { AxiosInstance } from 'axios'
+import { Todo } from '../Todo.type';
 
-export async function getAllTodos() {
-    try{
-        const response = await fetch('https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/get-todos', {
-            method: 'POST',
+export class ApiService {
+    private axiosInstance: AxiosInstance;
+
+    constructor(){
+        this.axiosInstance = axios.create({
+            baseURL: 'https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos',
+            timeout: 1000,
             headers: {'Content-Type': 'application/json'}
-        });
-        return await response.json();
-    }catch(error) {
-        return [];
-    }
-}
-
-export async function addNewTodo(todo: {text: string, completed: boolean}){
-    try{
-        const response = await fetch('https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/new-todo', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(todo)
         })
-        return await response.json()
-    }catch(error){
-        
+    }
+
+    async addTodo(todo: {text: string, completed: boolean}){
+        try{
+            const { data } = await this.axiosInstance.post(
+                '/new-todo',
+                todo 
+            )
+            return data as Todo
+        }catch(error){
+            
+        }
+    }
+
+    async toggleTodo(todo: Todo){
+        try{
+            const { data } = await this.axiosInstance.post(
+                `/toggle-todo`,
+                todo
+            )
+            return data
+        }catch(error){
+            
+        }
+    }
+
+    async getAllTodos() {
+        try{
+            const { data } = await this.axiosInstance.post(
+                '/get-todos');
+            return data;
+        }catch(error) {
+            return [];
+        }
+    }
+
+    async deleteTodo(todo: Todo){
+        try{
+            await this.axiosInstance.post(
+                `/delete-todos`,
+                todo, 
+            )
+    
+            return await this.getAllTodos()
+        }catch(error){
+            
+        }
     }
 }
-
-export async function toggleTodo(todo: Todo){
-    try{
-        const response = await fetch(`https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/toggle-todo`, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(todo)
-        })
-        return await response.json()
-    }catch(error){
-        
-    }
-}
-
-export async function deleteCompleted(todos: Todo[]){
-    try{
-        const completedTodos = todos.filter(todo => todo.completed).map(todo => todo.id)
-        await axios({
-            method: 'post',
-            url: `https://a87d-2600-1700-9778-d210-6c8c-516d-e72d-c4ae.ngrok.io/todos/delete-todos`, 
-            data: completedTodos,
-            headers: {'Content-Type': 'application/json'},    
-        });
-
-        return await getAllTodos()
-    }catch(error){
-        
-    }
-}
-

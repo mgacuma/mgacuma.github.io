@@ -4,23 +4,23 @@ import { Todo } from "../Todo.type";
 import TodoListItem from "./TodoListItem";
 
 interface TodoListProps {
-  items: Todo[];
-  onItemCheck: (id: number) => void;
-  onItemRemove: (id: number) => void;
+  todos: Todo[];
+  onItemCheck: (todo: Todo) => void;
+  onItemRemove: (todo: Todo) => void;
 }
 
-const TodoList: React.FC<TodoListProps> = React.memo(({ items, onItemCheck, onItemRemove }) => (
+const TodoList: React.FC<TodoListProps> = React.memo(({ todos, onItemCheck, onItemRemove }) => (
   <>
-    {items.length > 0 && (
+    {todos.length > 0 && (
       <Paper style={{ margin: 16 }}>
         <List style={{ overflow: "scroll" }}>
-          {items.map((todo, id) => (
+          {todos.map(todo => (
             <TodoListItem
-              {...todo}
-              key={`TodoItem.${id}`}
-              divider={id !== items.length - 1}
-              onButtonClick={() => onItemRemove(id)}
-              onCheckBoxToggle={() => onItemCheck(id)}
+              todo={todo}
+              key={`TodoItem.${todo.id}`}
+              divider={true}
+              onButtonClick={() => onItemRemove(todo)}
+              onCheckBoxToggle={() => onItemCheck(todo)}
             />
           ))}
         </List>

@@ -11,7 +11,7 @@ import TodoList from "./components/TodoList";
 
 const TodoApp = React.memo(() => {
   const { inputValue, changeInput, clearInput, keyInput } = useInputValue();
-  const { todos, addTodo, checkTodo, removeTodo } = useTodos();
+  const { todos, addTodo, toggleTodo, removeTodo } = useTodos();
 
   const clearInputAndAddTodo = () => {
     clearInput();
@@ -27,8 +27,8 @@ const TodoApp = React.memo(() => {
         onInputKeyPress={(event) => keyInput(event, clearInputAndAddTodo)}
       />
       <TodoList
-        items={todos}
-        onItemCheck={checkTodo}
+        todos={todos}
+        onItemCheck={toggleTodo}
         onItemRemove={removeTodo}
       />
     </Layout>
