@@ -1,7 +1,7 @@
 import { DeleteOutlined } from "@mui/icons-material";
 import { ListItem, Checkbox, ListItemText, ListItemSecondaryAction, IconButton } from "@mui/material";
 import React from "react";
-import { Todo } from "../Todo.type";
+import { Todo } from "./Todo.type";
 
 interface TodoListItemProps {
   todo: Todo;

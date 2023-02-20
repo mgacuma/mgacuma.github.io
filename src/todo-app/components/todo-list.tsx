@@ -1,7 +1,7 @@
 import { Paper, List } from "@mui/material";
 import React from "react";
-import { Todo } from "../Todo.type";
-import TodoListItem from "./TodoListItem";
+import { Todo } from "./Todo.type";
+import TodoListItem from "./todo-list-item";
 
 interface TodoListProps {
   todos: Todo[];

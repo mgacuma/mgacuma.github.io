@@ -1,6 +1,6 @@
 
 import axios, { AxiosInstance } from 'axios'
-import { Todo } from '../Todo.type';
+import { Todo } from '../components/Todo.type';
 
 export class ApiService {
     private axiosInstance: AxiosInstance;

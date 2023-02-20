@@ -1,38 +1,27 @@
-import "./styles.css";
 
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
+import Layout from "./shared/layout";
+import Home from "./home/home";
+import TodoApp from './todo-app/todo-app'
+import { BrowserRouter as Router, Routes as Switch, Route, Outlet } from "react-router-dom";
 
-import { useInputValue, useTodos } from "./custom-hooks";
+import './shared/styles/styles.css'
 
-import Layout from "./components/Layout";
-import AddTodo from "./components/AddTodo";
-import TodoList from "./components/TodoList";
 
-const TodoApp = React.memo(() => {
-  const { inputValue, changeInput, clearInput, keyInput } = useInputValue();
-  const { todos, addTodo, toggleTodo, removeTodo } = useTodos();
-
-  const clearInputAndAddTodo = () => {
-    clearInput();
-    addTodo(inputValue);
-  };
+const App = () => {
 
   return (
-    <Layout>
-      <AddTodo
-        inputValue={inputValue}
-        onInputChange={changeInput}
-        onButtonClick={clearInputAndAddTodo}
-        onInputKeyPress={(event) => keyInput(event, clearInputAndAddTodo)}
-      />
-      <TodoList
-        todos={todos}
-        onItemCheck={toggleTodo}
-        onItemRemove={removeTodo}
-      />
-    </Layout>
+    <Router>
+      <Switch>
+          <Route path='/hq' element={<Layout />} >
+            <Route index element={<Home />} />
+            <Route path='/hq/todo-app' element={<TodoApp />} />
+          </Route>
+      </Switch>
+    </Router>
   );
-});
+}
 
-ReactDOM.render(<TodoApp />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(<App />);
