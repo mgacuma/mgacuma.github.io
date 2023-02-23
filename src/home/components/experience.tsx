@@ -10,18 +10,18 @@ const Experience: React.FC = () => {
 
         <Grid item container justifyContent="center" direction="row" sx={{backgroundColor: ""}}>
 
-          <Grid item sm={5} spacing={4} sx={{backgroundColor: "", paddingBottom: 4}} >
-            <Typography variant="h4" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+          <Grid item sm={5} sx={{backgroundColor: "", paddingBottom: 4}} >
+            <Typography variant="h4" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               Envoy
             </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
+              Software Engineer
+            </Typography>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               San Francisco, CA
             </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               May 2022 - January 2023
-            </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
-              Software Engineer
             </Typography>
           </Grid>
 
@@ -73,16 +73,16 @@ const Experience: React.FC = () => {
           <Box sx={{backgroundColor: "", height: 48, width: '100%'}} />
 
           <Grid item sm={5} spacing={4} sx={{backgroundColor: "",  paddingBottom: 4}} >
-            <Typography variant="h4" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+            <Typography variant="h4" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               Cruise, Zoox
             </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               San Francisco, CA
             </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               September 2019 - February 2022
             </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}} paddingRight={{xs:4}} sx={{backgroundColor: ""}}>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               Senior Autonomous Vehicle Trainer
             </Typography>
           </Grid>

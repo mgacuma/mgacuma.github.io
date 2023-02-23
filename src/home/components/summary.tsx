@@ -3,7 +3,7 @@ import React from "react";
 
 const Summary: React.FC = () => {
     return (
-      <Grid container className="Summary" justifyContent="center" xs={12} paddingY={12}>
+      <Grid container className="Summary" justifyContent="center" xs={12} paddingY={8}>
         <Typography variant="h4" paddingBottom={4}>
             Professional Summary
         </Typography>

@@ -13,8 +13,8 @@ const Home: React.FC = () => {
     <Profile />
     <Summary />
     <Experience />
-    {/* <Education />
-    <Skills /> */}
+    <Education />
+    <Skills />
   </Paper>
   );
 };
