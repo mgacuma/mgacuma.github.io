@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Developed the Slack and Microsoft Teams flagship integrations, utilizing Javascript/TypeScript running on NodeJS and deployed using Docker and Kubernetes.
+                  Rebuilt existing flagship integrations for Slack and MS Teams, derived from legacy code, to deliver expanding products and features to approximately 15000 of weekly active users.
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -40,7 +40,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Implemented frameworks such as Express, Azure Bot SDK and Bolt SDK to integrate Envoy's workplace API platform, driving seamless user interactions using chat bots and modals.
+                  Utilized NodeJS applications written in Javascript/Typescript following common design patterns and practices to create an auto-completing, easily readable, testable, and scalable codebase.
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Secured integrations by validating HTTP requests and implementing custom OAuth flows for safe data access on behalf of users.
+                  Leveraged several UI frameworks like React to create a seamless and consistent experience aligning with our mobile experience to bring accessibility to our workplace platform tools.
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -56,7 +56,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Optimized performance by utilizing and interfacing with Redis caches and PostgreSQL DBs for fast and reliable data storage solutions.
+                  Introduced user authorization and authentication by implementing OAuth type flow to verify identity and allow client access to backend resources.
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -64,7 +64,23 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Ensured code quality by following a Test Driven Development approach, designing unit tests using Mocha, Chai, and Jest.
+                  Established data caching and storage solutions using Redis and PostgreSQL, optimizing backend service communication to significantly reduce asynchronous http request wait times by 250ms.
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <GamepadIcon sx={{color: 'white'}} />
+                </ListItemIcon>
+                <ListItemText>
+                 Ensured a professional level of quality by following a Test Driven Development approach, designing unit tests with test frameworks like Jest to uphold 90% code coverage on all Github repositories.
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <GamepadIcon sx={{color: 'white'}} />
+                </ListItemIcon>
+                <ListItemText>
+                  Collaborated closely with product and design, practicing agile methodologies and effective peer coding to deliver outstanding results ensuring alignment with companies roadmap.
                 </ListItemText>
               </ListItem>
             </List>
@@ -94,7 +110,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Executed daily autonomous runs with emphasis on safety, achieving a daily average of 120 autonomous miles.
+                  Executed autonomous runs on public roads with emphasis on safety and efficiency, supplying accurate data collection while achieving a daily average of 120 autonomous miles.
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -102,7 +118,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Implemented an adaptive training approach improving new hire training time by 20%.
+                  Demonstrated a great understanding of the autonomous system by supporting fellow operators with system information during runtime and minimizing downtime with common troubleshooting workarounds.
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -110,7 +126,7 @@ const Experience: React.FC = () => {
                   <GamepadIcon sx={{color: 'white'}} />
                 </ListItemIcon>
                 <ListItemText>
-                  Minimized downtime by effectively troubleshooting systems using common proven workarounds.
+                  Followed an adaptive teaching approach catered to each individual operator to improve new hire onboarding time by 20%.
                 </ListItemText>
               </ListItem>
             </List>

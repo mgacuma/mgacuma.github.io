@@ -15,7 +15,7 @@ const Summary: React.FC = () => {
 
             <Grid item xs={11} sm={7} paddingLeft={4} sx={{ borderLeft: "2px solid black"}} paddingRight={{xs: 4, sm: 12, md: 32}} >
               <Typography variant="body1">
-                Proficient Software Engineer with a comprehensive background in the entire software development life cycle, from design to deployment of web-based client and server applications. Proactively embraces new challenges with a strong desire to continuously learn and master new skills and technologies resulting in effective and efficient solutions. Strong communicator with exceptional interpersonal skills, able to effectively collaborate with team members to foster a positive work environment and achieve exceptional results.
+                Resourceful and results driven software engineer with one year of experience in full-stack web development.  Adaptive problem-solver capable of evaluating benefits and drawbacks in all phases of the software development lifecycle. Proactively embraces challenges and tasks with a strong desire to continuously explore and incorporate new technologies and solutions. Genuine communicator able to effectively collaborate with peers following an open approach to foster a positive collaborative environment. 
               </Typography>
             </Grid>
           </Grid>
