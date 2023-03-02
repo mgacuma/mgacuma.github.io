@@ -93,13 +93,13 @@ const Experience: React.FC = () => {
               Cruise, Zoox
             </Typography>
             <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
+              Senior Autonomous Vehicle Trainer
+            </Typography>
+            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               San Francisco, CA
             </Typography>
             <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
               September 2019 - February 2022
-            </Typography>
-            <Typography variant="h6" textAlign={{xs:"start", sm: 'end'}}  paddingRight={{xs: 0, sm: 4}} sx={{backgroundColor: ""}}>
-              Senior Autonomous Vehicle Trainer
             </Typography>
           </Grid>
 
