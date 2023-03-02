@@ -2,7 +2,7 @@ import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import Education from "./components/education";
 import Experience from "./components/experience";
-import Profile from "./components/Profile";
+import Profile from "./components/profile";
 import Skills from "./components/skills";
 import Summary from "./components/summary";
 
