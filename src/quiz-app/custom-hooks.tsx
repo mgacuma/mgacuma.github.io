@@ -20,6 +20,7 @@ export const useTodos = () => {
   const [score, setScore] = useState<number>(0);
   const [activeTimer, setActiveTimer] = useState<Boolean>(false);
   const [time, setTime] = useState<number>(15);
+  const [showAnswer, setShowAnswer] = useState<Boolean>(false);
 
   const quizApiService = new QuizApiService();
 
@@ -55,19 +56,26 @@ export const useTodos = () => {
 
   const selectAnswer = (answer: string) => {   
     setActiveTimer(false);
+    setShowAnswer(true);
 
     if (answer === questions[0].correct_answer) {
       setScore(score + 1)
     }
+    
+    setTimeout(() => {
 
     if(questions.length > 1){
       setQuestions(questions.slice(1))
       
     } else {
       populateQuestions();
-    }  
-    setTime(15)
-    setActiveTimer(true)
+    }
+
+    
+      setTime(15)
+      setShowAnswer(false)
+      setActiveTimer(true)
+    }, 2500)
   }
 
   return {
@@ -75,5 +83,6 @@ export const useTodos = () => {
     selectAnswer,
     score,
     time,
+    showAnswer
   }
 }
