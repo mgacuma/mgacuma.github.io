@@ -11,9 +11,6 @@ interface UtilsBoxProp {
 }
 
 const UtilsBox: React.FC<UtilsBoxProp> = React.memo(({ time, score }) => {
-
-  
-
   return (
     <Grid container className="UtilsBox" justifyContent='center' xs={12} paddingTop={3} sx={{backgroundColor: ''}}>
       <Box sx={{margin: 0, padding: 0, width: '90%', backgroundColor: ''}}>

@@ -50,7 +50,7 @@ export class ApiService {
     async deleteTodo(todo: Todo){
         try{
             await this.axiosInstance.post(
-                `/delete-todos`,
+                `/delete-todo`,
                 todo, 
             )
     

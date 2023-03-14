@@ -6,7 +6,11 @@ import AddTodo from "./components/add-todo";
 import TodoList from "./components/todo-list";
 import Box from "@mui/material/Box/Box";
 
-const TodoApp = React.memo(() => {
+interface TodoAppProps {
+
+}
+
+const TodoApp: React.FC<TodoAppProps> = React.memo(({}) => {
   const { inputValue, changeInput, clearInput, keyInput } = useInputValue();
   const { todos, addTodo, toggleTodo, removeTodo } = useTodos();
 

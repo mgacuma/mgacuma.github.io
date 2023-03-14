@@ -14,12 +14,10 @@ const QuizApp: React.FC<QuizAppProps> = React.memo(({}) => {
 
   return (
     <Box className="QuizApp" >
-
       <UtilsBox 
         score={score} 
         time={time} 
       />
-      
       <QuestionBox
         question={questions[0]}
         time={time}
