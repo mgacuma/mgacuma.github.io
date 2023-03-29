@@ -10,7 +10,7 @@ import './shared/styles/styles.css'
 import QuizApp from "./quiz-app/quiz-app";
 
 
-const App = () => {
+const App: React.FC = () => {
 
   return (
     <Router>
