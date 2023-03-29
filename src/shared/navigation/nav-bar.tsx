@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Container, Drawer, Grid, IconButton, List, ListItem, Menu, MenuItem, Paper, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Container, Divider, Drawer, Grid, IconButton, List, ListItem, Menu, MenuItem, Paper, Toolbar, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedinIcon from '@mui/icons-material/LinkedIn'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -25,11 +25,17 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
             </Button>
 
             <Drawer open={drawer} anchor='left' onClose={() => setDrawer(false)}>
+
+                <Box paddingX={2}>
                   <Link to="/hq/" onClick={() => {setDrawer(false)}} style={{textDecoration: 'none', color: '#27323d'}}><Typography paddingY={1} variant="h4">Home</Typography></Link>
+                  <Divider />
                   <Link to="/hq/todo-app" onClick={() => {setDrawer(false)}} style={{textDecoration: 'none', color: '#27323d'}}><Typography variant="h4">Todo App</Typography></Link>
+                  <Divider />
                   <Link to="/hq/quiz-app" onClick={() => {setDrawer(false)}} style={{textDecoration: 'none', color: '#27323d'}}><Typography paddingY={1} variant="h4">Quiz App</Typography></Link>
-                  
-                  <Box justifyContent={'center'} alignItems='center'>
+                  <Divider />
+                </Box>
+
+                  <Box justifyContent={'center'} paddingY={1} paddingX={2} alignItems='center'>
                     <Link to="https://github.com/mgacuma" rel="noopener noreferrer" target="_blank">
                       <GitHubIcon  sx={{color: '#27323d'}}/> 
                     </Link>
