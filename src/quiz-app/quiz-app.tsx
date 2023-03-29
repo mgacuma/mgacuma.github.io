@@ -1,7 +1,7 @@
 import { Box, Grid, Paper } from "@mui/material";
 import React from "react";
 import AnswersBox from "./components/answer/answer-box";
-import { useTodos } from "./custom-hooks";
+import { useQuiz } from "./custom-hooks";
 import QuestionBox from "./components/question/question-box";
 import UtilsBox from "./components/utils/utils";
 
@@ -10,7 +10,7 @@ interface QuizAppProps {
 }
 
 const QuizApp: React.FC<QuizAppProps> = React.memo(({}) => {
-  const { questions, score, selectAnswer, time, showAnswer} = useTodos();
+  const { questions, score, selectAnswer, time, showAnswer} = useQuiz();
 
   return (
     <Box className="QuizApp" >

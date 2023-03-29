@@ -15,7 +15,7 @@ const initialQuestions: Question[] = [
   }
 ]
 
-export const useTodos = () => {
+export const useQuiz = () => {
   const [questions, setQuestions] = useState<Question[]>(initialQuestions);
   const [score, setScore] = useState<number>(0);
   const [activeTimer, setActiveTimer] = useState<Boolean>(false);
@@ -35,7 +35,7 @@ export const useTodos = () => {
   useEffect(() => {
     let timerInterval: number | undefined
 
-    if(time === -1){
+    if(time === 0){
       selectAnswer('')
     }
 
