@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
+import NavToTop from "../shared/navigation/nav-to-top";
 import Education from "./components/education";
 import Experience from "./components/experience";
 import Profile from "./components/profile";
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
     <Experience />
     <Education />
     <Skills />
+    <NavToTop />
   </Paper>
   );
 };
