@@ -17,7 +17,7 @@ const TodoList: React.FC<TodoListProps> = React.memo(({ todos, onItemCheck, onIt
           <TodoListItem
             todo={todo}
             key={`TodoItem.${todo.id}`}
-            divider={true}
+            divider={todos.indexOf(todo) === todos.length - 1 ? false : true}
             onButtonClick={() => onItemRemove(todo)}
             onCheckBoxToggle={() => onItemCheck(todo)}
           />
