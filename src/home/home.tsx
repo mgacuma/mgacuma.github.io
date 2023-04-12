@@ -16,7 +16,6 @@ const Home: React.FC = () => {
     <Experience />
     <Education />
     <Skills />
-    <NavToTop />
   </Paper>
   );
 };

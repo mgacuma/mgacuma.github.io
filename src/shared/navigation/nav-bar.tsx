@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import React, { ReactElement, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { NavLinks } from "./nav-links";
+import NavToTop from "./nav-to-top";
 
 interface NavBarProps {
 
@@ -14,7 +15,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
   const [drawer, setDrawer] = useState<boolean>(false);
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "white" }}>
+    <AppBar position="sticky" style={{ backgroundColor: "white" }}>
         <Toolbar>
 
           <NavLinks />
@@ -46,8 +47,20 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
             </Drawer>
           </Box>
 
+          <Typography sx={{
+              mr: 2,
+              display: { xs: 'flex', sm: 'none' },
+              flexGrow: 1,
+              fontSize: 28,
+              letterSpacing: '.007rem',
+              color: '#27323d',
+              textDecoration: 'none',
+            }}>
+            {'Hire Me Maybe'}
+          </Typography>
 
         </Toolbar>
+        <NavToTop />
     </AppBar>
   )
 }
