@@ -7,7 +7,7 @@ import Profile from "./components/profile";
 import Skills from "./components/skills";
 import Summary from "./components/summary";
 
-const Home: React.FC = () => {
+export function Home() {
 
   return ( 
   <Paper sx={{backgroundColor: "#f2f2f2"}}>
@@ -19,5 +19,3 @@ const Home: React.FC = () => {
   </Paper>
   );
 };
-
-export default Home

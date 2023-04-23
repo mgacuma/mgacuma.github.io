@@ -1,29 +1,35 @@
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Layout from "./shared/layout";
-import Home from "./home/home";
-import TodoApp from './todo-app/todo-app'
-import { BrowserRouter as Router, Routes as Switch, Route, Outlet } from "react-router-dom";
-
-import './shared/styles/styles.css'
+import { Home } from "@mui/icons-material";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import QuizApp from "./quiz-app/quiz-app";
+import { Layout } from "./shared/layout";
+import NavBar from "./shared/navigation/nav-bar";
+import TodoApp from "./todo-app/todo-app";
 
+const router = createBrowserRouter([
+  {
+    path: 'hq',
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: 'todo-app',
+        element: <TodoApp />
+      },
+      {
+        path: 'quiz-app',
+        element: <QuizApp />
+      }
+    ],
+  },
+])
 
-const App: React.FC = () => {
-
-  return (
-    <Router>
-      <Switch>
-          <Route path='/hq' element={<Layout />} >
-            <Route index element={<Home />} />
-            <Route path='/hq/todo-app' element={<TodoApp />} />
-            <Route path='/hq/quiz-app' element={<QuizApp />} />
-          </Route>
-      </Switch>
-    </Router>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(<App />);
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
