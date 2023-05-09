@@ -1,21 +1,25 @@
-import { Box, Container, Grid, Paper, Typography } from "@mui/material";
-import React from "react";
-import NavToTop from "../shared/navigation/nav-to-top";
-import Education from "./components/education";
-import Experience from "./components/experience";
+import { Box } from "@mui/material";
 import Profile from "./components/profile";
 import Skills from "./components/skills";
-import Summary from "./components/summary";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
+import Projects from "./components/projects";
+import "./styles/home.css"
 
 export function Home() {
 
   return ( 
-  <Paper sx={{backgroundColor: "#f2f2f2"}}>
+  <Box style={{
+    backgroundColor: '#151515',
+    fontFamily: 'Space Grotesk',
+    overflow: 'hidden',
+    // color: 'white'
+    }}>
     <Profile />
-    <Summary />
-    <Experience />
-    <Education />
     <Skills />
-  </Paper>
+    <Projects />
+    <Contact />
+    <Footer />
+  </Box>
   );
 };

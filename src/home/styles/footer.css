@@ -1,0 +1,41 @@
+.footer-container {
+    position: relative;
+    display: flex;
+    max-width: 1110px;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 92px;
+    padding-top: 42px;
+    border-top: 2px solid white;
+}
+
+.logo {
+    line-height: 24px;
+}
+
+.links-container {
+    display: flex;
+    width: auto;
+    gap: 24px;
+
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.links-container a {
+    cursor: pointer;
+}
+
+.links-container a:visited {
+    color: white;
+}
+
+.links-container a:hover {
+    color: green;
+}
+
+.icon:hover {
+    
+}

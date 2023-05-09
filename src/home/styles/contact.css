@@ -1,0 +1,108 @@
+.contact-container {
+    position: relative;
+    display: flex;
+    max-width: 1110px;
+    justify-content: space-between;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 84px;
+}
+
+.contact-text {
+    max-width: 445px;
+}
+
+.contact-text h1 {
+    margin: 0;
+    line-height: 88px;
+    font-size: 88px;
+}
+
+.contact-text p {
+    margin-top: 36px;
+}
+
+.contact-form {
+    width: 445px;
+    min-width: 343px;
+}
+
+.input-container {
+    width: 100%;
+    position: relative;
+    cursor: text;
+}
+
+.input-container label{ 
+    position: absolute;
+    left: 24px;
+    cursor: text;
+}
+
+.input-container input, textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 100%;
+}
+
+.input-container input {
+    height: 43px;
+    padding-left: 24px;
+}
+
+.input-container input:focus {
+    border-bottom: 2px solid green;
+    outline: none;
+}
+
+.input-container input:focus+label {
+    opacity: 0;
+}
+
+.input-container input:not(:placeholder-shown)+label {
+    opacity: 0;
+}
+
+.email {
+    margin-top: 32px;
+}
+
+.message {
+    margin-top: 32px;
+}
+
+.input-container textarea {
+    height: 107px;
+    padding-left: 24px;
+    padding-right: 24px;
+    resize: none;
+}
+
+.input-container textarea:focus {
+    outline: none;
+    border-bottom: 2px solid green;
+}
+
+.input-container textarea:focus+label {
+    opacity: 0;
+}
+
+.input-container textarea:not(:placeholder-shown)+label {
+    opacity: 0;
+}
+
+.submit {
+    margin-top: 32px; 
+    padding-bottom: 10px;
+    float: right;
+    background: none;
+    border: none;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+    font-family: 'Space Grotesk';
+}
+
+.submit:hover {
+    color: green;
+}

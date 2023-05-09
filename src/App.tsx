@@ -1,11 +1,10 @@
-import { Home } from "@mui/icons-material";
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
+import { Home } from './home/home';
 import QuizApp from "./quiz-app/quiz-app";
-import { Layout } from "./shared/layout";
-import NavBar from "./shared/navigation/nav-bar";
 import TodoApp from "./todo-app/todo-app";
+import { Layout } from './shared/layout';
 
 const router = createBrowserRouter([
   {

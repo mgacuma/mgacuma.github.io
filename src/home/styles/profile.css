@@ -1,0 +1,144 @@
+.b {
+    border: 1px dotted white;
+}
+
+.profile-container {
+    position: relative;
+    display: flex;
+    max-width: 1110px;
+    justify-content: space-between;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    padding-bottom: 4px;
+    color: var(--white)
+}
+
+.profile-content {
+    z-index: 100;
+    margin-top: 198px;
+    margin-right: -180px;
+}
+
+.profile-header h1{
+    margin: 0px;
+    line-height: 88px;
+    font-size: 88px;
+    letter-spacing: -5px;
+}
+
+.name-text {
+    margin-bottom: 0px;
+    border-bottom: 3px solid var(--green);
+}
+
+
+
+.profile-body {
+    margin-top: 43px;
+    max-width: 445px;
+    color: var(--lgray)
+}
+
+.profile-cta {
+    margin-top: 66px;
+    padding-bottom: 10px;
+}
+
+.profile-cta a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.profile-cta a:hover {
+    color: var(--green);
+}
+
+.profile-cta a:visited {
+    color: inherit;
+}
+
+.img-portrait {
+    width: 100%;
+    height: auto;
+    max-width: 445px;
+    max-height: 720px;
+    object-fit: cover;
+    filter: grayscale(0.25);
+}
+
+.img-portrait-mobile {
+    display: none;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1110px){
+    .profile-content {
+        padding-left: 32px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .profile-content {
+        padding-left: 32px;
+        margin-top: 151px;
+    }
+
+    
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    .profile-content {
+        padding-left: 32px;
+        margin-right: -128px;
+        margin-top: 151px;
+    }
+
+    .profile-cta {
+        margin-top: 32px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .img-portrait {
+        display: none;
+    }
+
+    .img-portrait-mobile {
+        display: flex;
+        width: 230px;
+        height: 383px;
+        object-fit: cover;
+    }
+
+    .profile-content {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .profile-header {
+        margin-top: 40px;
+    }
+
+    .profile-header h1{
+        margin: 0px;
+        line-height: 40px;
+        font-size: 40px;
+        letter-spacing: -1.14px;
+    }
+
+    .profile-body {
+        margin-top: 24px;
+    }
+
+    .profile-cta {
+        margin-top: 24px;
+    }
+}
