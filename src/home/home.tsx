@@ -5,6 +5,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Projects from "./components/projects";
 import "./styles/home.css"
+import Header from "./components/header";
 
 export function Home() {
 
@@ -15,6 +16,7 @@ export function Home() {
     overflow: 'hidden',
     // color: 'white'
     }}>
+    <Header />
     <Profile />
     <Skills />
     <Projects />

@@ -8,33 +8,58 @@ const Skills: React.FC = () => {
       <div className="skills-grid ">
         
         <div className="skill-item ">
-          <h1>HTML</h1>
-          <p>4 Years Experience</p>
+          <h1>Javascript</h1>
+          <p>3 Years Experience</p>
         </div>
 
         <div className="skill-item ">
-          <h1>CSS</h1>
-          <p>4 Years Experience</p>
+          <h1>Typescript</h1>
+          <p>1 Year Experience</p>
         </div>
 
         <div className="skill-item ">
-          <h1>Javascript</h1>
-          <p>4 Years Experience</p>
+          <h1>HTML</h1>
+          <p>3 Years Experience</p>
         </div>
 
         <div className="skill-item">
-          <h1>HTML</h1>
-          <p>4 Years Experience</p>
+          <h1>Node</h1>
+          <p>3 Years Experience</p>
         </div>
 
         <div className="skill-item">
           <h1>CSS</h1>
-          <p>4 Years Experience</p>
+          <p>3 Years Experience</p>
         </div>
 
         <div className="skill-item">
-          <h1>Javascript</h1>
-          <p>4 Years Experience</p>
+          <h1>Express</h1>
+          <p>1 Year Experience</p>
+        </div>
+
+        <div className="skill-item">
+          <h1>React</h1>
+          <p>1 Year Experience</p>
+        </div>
+
+        <div className="skill-item">
+          <h1>PostgreSQL</h1>
+          <p>1 Year Experience</p>
+        </div>
+
+        <div className="skill-item">
+          <h1>Redis</h1>
+          <p>1 Year Experience</p>
+        </div>
+
+        <div className="skill-item">
+          <h1>Docker</h1>
+          <p>1 Year Experience</p>
+        </div>
+
+        <div className="skill-item">
+          <h1>Kubernetes</h1>
+          <p>1 Year Experience</p>
         </div>
 
       </div>

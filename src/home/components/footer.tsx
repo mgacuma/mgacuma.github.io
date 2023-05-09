@@ -1,4 +1,4 @@
-import "../styles/skills.css"
+import "../styles/footer.css"
 
 const Footer: React.FC = () => {
   return (

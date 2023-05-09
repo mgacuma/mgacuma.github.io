@@ -57,6 +57,20 @@
     }
 }
 
+@media only screen and (max-width: 756px){
+    .skill-item {
+        text-align: center;
+        place-self: center;
+    }
+
+    .skills-grid {
+        margin-top: 40px;
+        row-gap: 42px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid var(--white);
+    }
+}
+
 @media only screen and (max-width: 425px){
     .skills-container {
         position: relative;
@@ -75,19 +89,5 @@
         line-height: 40px;
         font-size: 32px;
         letter-spacing: -1px;
-    }
-}
-
-@media only screen and (max-width: 756px){
-    .skill-item {
-        text-align: center;
-        place-self: center;
-    }
-
-    .skills-grid {
-        margin-top: 40px;
-        row-gap: 42px;
-        padding-bottom: 40px;
-        border-bottom: 2px solid var(--white);
     }
 }

@@ -27,9 +27,9 @@ const Projects: React.FC = () => {
 
       <div className="projects-grid">
 
-        <div className="project-item">
+      <div className="project-item">
           <div className="project-img">
-            <img src="https://images2.boardingschoolreview.com/photo/1122x864/1000/593/img-academy-0Kqhnq.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
             <div className="project-cta img">
               <button><span>View Project</span></button>
               <button><span>View Code</span></button>
@@ -37,8 +37,8 @@ const Projects: React.FC = () => {
             <div className="overlay" />
           </div>
           <div className="project-text">
-            <h2 className="project-title">Design Portfolio</h2>
-            <p>HTML CSS JAVASCRIPT</p>
+            <h2 className="project-title">Matchtracker.gg</h2>
+            <p>Typescript React GraphQL</p>
           </div>
           <div className="project-cta">
             <button><span>View Project</span></button>
@@ -48,33 +48,62 @@ const Projects: React.FC = () => {
 
         <div className="project-item">
           <div className="project-img">
-            <img src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <div className="project-cta img">
+              <button><span>View Project</span></button>
+              <button><span>View Code</span></button>
+            </div>
+            <div className="overlay" />
           </div>
           <div className="project-text">
-            <h2 className="project-title">Design Portfolio</h2>
-            <p>HTML CSS JAVASCRIPT</p>
+            <h2 className="project-title">Web Design</h2>
+            <p>HTML CSS Javascript</p>
+          </div>
+          <div className="project-cta">
+            <button><span>View Project</span></button>
+            <button><span>View Code</span></button>
           </div>
         </div>
 
         <div className="project-item">
           <div className="project-img">
-            <img src="https://images2.boardingschoolreview.com/photo/1122x864/1000/593/img-academy-0Kqhnq.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <div className="project-cta img">
+              <button><span>View Project</span></button>
+              <button><span>View Code</span></button>
+            </div>
+            <div className="overlay" />
           </div>
           <div className="project-text">
-            <h2 className="project-title">Design Portfolio</h2>
-            <p>HTML CSS JAVASCRIPT</p>
+            <h2 className="project-title">Todo App</h2>
+            <p>Node Express PostgreSQL</p>
+          </div>
+          <div className="project-cta">
+            <button><span>View Project</span></button>
+            <button><span>View Code</span></button>
           </div>
         </div>
 
         <div className="project-item">
           <div className="project-img">
-            <img src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <div className="project-cta img">
+              <button><span>View Project</span></button>
+              <button><span>View Code</span></button>
+            </div>
+            <div className="overlay" />
           </div>
           <div className="project-text">
-            <h2 className="project-title">Design Portfolio</h2>
-            <p>HTML CSS JAVASCRIPT</p>
+            <h2 className="project-title">Quiz App</h2>
+            <p>MUI Axios REST</p>
+          </div>
+          <div className="project-cta">
+            <button><span>View Project</span></button>
+            <button><span>View Code</span></button>
           </div>
         </div>
+
+        
 
       </div>
     </div>

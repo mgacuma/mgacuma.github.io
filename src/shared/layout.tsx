@@ -18,7 +18,6 @@ export function Layout() {
   return (
     <ThemeProvider theme={theme} >
       <CssBaseline />
-        <NavBar />
         <Outlet />
     </ThemeProvider>
   )
