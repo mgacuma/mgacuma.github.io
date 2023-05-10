@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/projects.css";
+import { Link } from "react-router-dom";
 
 const Projects: React.FC = () => {
   return (
@@ -29,10 +30,10 @@ const Projects: React.FC = () => {
 
       <div className="project-item">
           <div className="project-img">
-            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <img src="./matchtracker.gg.png" />
             <div className="project-cta img">
-              <button><span>View Project</span></button>
-              <button><span>View Code</span></button>
+              <a href="https://mgacuma.github.io/match-tracker-client/" target="_blank"><span>View Project</span></a>
+              <a href="https://github.com/mgacuma/match-tracker" target="_blank"><span>View Code</span></a>
             </div>
             <div className="overlay" />
           </div>
@@ -41,17 +42,17 @@ const Projects: React.FC = () => {
             <p>Typescript React GraphQL</p>
           </div>
           <div className="project-cta">
-            <button><span>View Project</span></button>
-            <button><span>View Code</span></button>
+            <a href="https://mgacuma.github.io/match-tracker-client/" target="_blank"><span>View Project</span></a>
+            <a href="https://github.com/mgacuma/match-tracker" target="_blank"><span>View Code</span></a>
           </div>
         </div>
 
         <div className="project-item">
           <div className="project-img">
-            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <img src="./web.png" />
             <div className="project-cta img">
-              <button><span>View Project</span></button>
-              <button><span>View Code</span></button>
+              <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation-main/" target="_blank"><span>View Project</span></a>
+              <a href="https://github.com/mgacuma/intro-section-with-dropdown-navigation-main" target="_blank"><span>View Code</span></a>
             </div>
             <div className="overlay" />
           </div>
@@ -60,17 +61,17 @@ const Projects: React.FC = () => {
             <p>HTML CSS Javascript</p>
           </div>
           <div className="project-cta">
-            <button><span>View Project</span></button>
-            <button><span>View Code</span></button>
+            <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation-main/" target="_blank"><span>View Project</span></a>
+            <a href="https://github.com/mgacuma/intro-section-with-dropdown-navigation-main" target="_blank"><span>View Code</span></a>
           </div>
         </div>
 
         <div className="project-item">
           <div className="project-img">
-            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <img src="./todo-app.png" />
             <div className="project-cta img">
-              <button><span>View Project</span></button>
-              <button><span>View Code</span></button>
+              <Link to="todo-app"><span>View Project</span></Link>
+              <a href="https://github.com/mgacuma/todo-server" target="_blank"><span>View Code</span></a>
             </div>
             <div className="overlay" />
           </div>
@@ -79,17 +80,17 @@ const Projects: React.FC = () => {
             <p>Node Express PostgreSQL</p>
           </div>
           <div className="project-cta">
-            <button><span>View Project</span></button>
-            <button><span>View Code</span></button>
+            <Link to="todo-app"><span>View Project</span></Link>
+            <a href="https://github.com/mgacuma/todo-server" target="_blank"><span>View Code</span></a>
           </div>
         </div>
 
         <div className="project-item">
           <div className="project-img">
-            <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+            <img src="./quiz-app.png" />
             <div className="project-cta img">
-              <button><span>View Project</span></button>
-              <button><span>View Code</span></button>
+              <Link to="quiz-app"><span>View Project</span></Link>
+              <a href="https://github.com/mgacuma/hq/tree/main/src/quiz-app" target="_blank"><span>View Code</span></a>
             </div>
             <div className="overlay" />
           </div>
@@ -98,8 +99,8 @@ const Projects: React.FC = () => {
             <p>MUI Axios REST</p>
           </div>
           <div className="project-cta">
-            <button><span>View Project</span></button>
-            <button><span>View Code</span></button>
+            <Link to="quiz-app"><span>View Project</span></Link>
+            <a href="https://github.com/mgacuma/hq/tree/main/src/quiz-app" target="_blank"><span>View Code</span></a>
           </div>
         </div>
 

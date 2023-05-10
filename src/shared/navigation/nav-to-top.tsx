@@ -22,7 +22,7 @@ const NavToTop: React.FC<NavToTopProps> = ({}) => {
             <Box
                 onClick={scrollToTop}
                 role="presentation"
-                sx={{ position: 'fixed', bottom: 32, right: 32 }}
+                sx={{ position: 'fixed', zIndex: 9999, bottom: 32, right: 32 }}
             >
                 <Fab size="medium" aria-label="scroll back to top">
                     <KeyboardArrowUp fontSize="large" sx={{color: '#27323d'}}/>

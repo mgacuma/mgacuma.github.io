@@ -20,7 +20,7 @@ const TodoApp: React.FC<TodoAppProps> = React.memo(({}) => {
   };
 
   return (
-    <Box className="TodoApp" sx={{backgroundColor: ''}}>
+    <Box className="TodoApp" sx={{backgroundColor: '#f2f2f2', py:1}}>
       <AddTodo
         inputValue={inputValue}
         onInputChange={changeInput}

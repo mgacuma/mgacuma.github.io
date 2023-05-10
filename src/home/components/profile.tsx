@@ -18,7 +18,7 @@ const Profile: React.FC = () => {
 
         <div className="profile-body">
           <p>
-            Based in San Francisco, I'm a full-stack developer passionate about building intuitive tools to make our life easier.
+            Based in San Francisco, I'm a full-stack developer passionate about building intuitive tools to make everyone's lives easier.
           </p>
         </div>
 

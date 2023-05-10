@@ -1,6 +1,7 @@
 import { Box, createTheme, CssBaseline, Paper, ThemeProvider, Typography } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import NavBar from "./navigation/nav-bar";
+import NavToTop from "./navigation/nav-to-top";
 
 const theme = createTheme({
   palette: {
@@ -18,6 +19,7 @@ export function Layout() {
   return (
     <ThemeProvider theme={theme} >
       <CssBaseline />
+        <NavToTop />
         <Outlet />
     </ThemeProvider>
   )
