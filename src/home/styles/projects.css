@@ -37,7 +37,7 @@
 }
 
 .projects-headline a:visited {
-    color: inherit;
+    color: var(--white);
 }
 
 .projects-grid {

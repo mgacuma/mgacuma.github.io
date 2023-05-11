@@ -57,7 +57,7 @@
 }
 
 .profile-cta a:visited {
-    color: white;
+    color: var(--white);
 }
 
 .img-portrait {
