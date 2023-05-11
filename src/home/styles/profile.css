@@ -57,7 +57,7 @@
 }
 
 .profile-cta a:visited {
-    color: inherit;
+    color: white;
 }
 
 .img-portrait {
@@ -100,7 +100,7 @@
     }
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 450px){
     .img-portrait {
         display: none;
     }
