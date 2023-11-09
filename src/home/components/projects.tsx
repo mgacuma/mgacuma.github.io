@@ -49,6 +49,25 @@ const Projects: React.FC = () => {
 
         <div className="project-item">
           <div className="project-img">
+            <img src="./newsletter.png" />
+            <div className="project-cta img">
+              <a href="https://mgacuma.github.io/newsletter-sign-up/" target="_blank"><span>View Project</span></a>
+              <a href="https://github.com/mgacuma/newsletter-sign-up" target="_blank"><span>View Code</span></a>
+            </div>
+            <div className="overlay" />
+          </div>
+          <div className="project-text">
+            <h2 className="project-title">Newsletter Page</h2>
+            <p>HTML CSS Javascript</p>
+          </div>
+          <div className="project-cta">
+            <a href="https://mgacuma.github.io/newsletter-sign-up/" target="_blank"><span>View Project</span></a>
+            <a href="https://github.com/mgacuma/newsletter-sign-up" target="_blank"><span>View Code</span></a>
+          </div>
+        </div>
+
+        <div className="project-item">
+          <div className="project-img">
             <img src="./web.png" />
             <div className="project-cta img">
               <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation/" target="_blank"><span>View Project</span></a>
@@ -57,12 +76,12 @@ const Projects: React.FC = () => {
             <div className="overlay" />
           </div>
           <div className="project-text">
-            <h2 className="project-title">Web Design</h2>
+            <h2 className="project-title">Landing Page</h2>
             <p>HTML CSS Javascript</p>
           </div>
           <div className="project-cta">
-            <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation-main/" target="_blank"><span>View Project</span></a>
-            <a href="https://github.com/mgacuma/intro-section-with-dropdown-navigation-main" target="_blank"><span>View Code</span></a>
+            <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation/" target="_blank"><span>View Project</span></a>
+            <a href="https://github.com/mgacuma/intro-section-with-dropdown-navigation" target="_blank"><span>View Code</span></a>
           </div>
         </div>
 

@@ -71,7 +71,8 @@
 .project-img {
     position: relative;
     z-index: 0;
-    max-height: 400px;
+    object-fit: cover;
+    height: 360px;
     overflow: hidden;
 }
 
