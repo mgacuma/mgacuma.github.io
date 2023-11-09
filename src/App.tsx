@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from './home/home';
 import QuizApp from "./quiz-app/quiz-app";
 import TodoApp from "./todo-app/todo-app";
@@ -8,7 +8,7 @@ import { Layout } from './shared/layout';
 
 const router = createBrowserRouter([
   {
-    path: 'hq',
+    path: '/',
     element: <Layout />,
     children: [
       {

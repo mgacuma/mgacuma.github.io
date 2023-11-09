@@ -1,6 +1,3 @@
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedinIcon from '@mui/icons-material/LinkedIn'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useLocation, Link } from "react-router-dom";
 import NavToTop from "./nav-to-top";
@@ -16,7 +13,7 @@ export function NavBar() {
         <Grid container spacing={1}>
           <Grid item xs={6}>
             <Box width='80%' textAlign='center'>
-              <MLink underline='none' component={Link} to={'/hq/'} variant='h4'>
+              <MLink underline='none' component={Link} to={'/'} variant='h4'>
                 mgacuma
               </MLink>
 
@@ -32,24 +29,24 @@ export function NavBar() {
             >
               <Tab
                 disableRipple
-                value='/hq/'
+                value='/'
                 label="Home"
                 component={Link}
-                to={'/hq/'}
+                to={'/'}
               />
               <Tab
                 disableRipple
-                value='/hq/todo-app'
+                value='/todo-app'
                 label="Todo App"
                 component={Link}
-                to='/hq/todo-app'
+                to='/todo-app'
               />
               <Tab
                 disableRipple
-                value='/hq/quiz-app'
+                value='/quiz-app'
                 label="Quiz App"
                 component={Link}
-                to='/hq/quiz-app'
+                to='/quiz-app'
               />
             </Tabs>
           </Grid>
@@ -79,22 +76,22 @@ export function NavBar() {
           }
         >
           <Tab
-            value='/hq/'
+            value='/'
             label="Home"
             component={Link}
-            to={'/hq/'}
+            to={'/'}
           />
           <Tab
-            value='/hq/todo-app'
+            value='/todo-app'
             label="Todo App"
             component={Link}
-            to='/hq/todo-app'
+            to='/todo-app'
           />
           <Tab
-            value='/hq/quiz-app'
+            value='/quiz-app'
             label="Quiz App"
             component={Link}
-            to='/hq/quiz-app'
+            to='/quiz-app'
           />
         </Tabs>
       </Drawer>

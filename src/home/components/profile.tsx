@@ -42,7 +42,7 @@ const Profile: React.FC = () => {
         
       </div>
 
-      <img className="img-portrait" src="./portrait-full.jpeg" />
+      <img className="img-portrait" src="./professional.jpeg" />
 
     </div>
   )

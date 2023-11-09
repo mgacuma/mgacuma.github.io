@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
           <div className="project-img">
             <img src="./matchtracker.gg.png" />
             <div className="project-cta img">
-              <a href="https://mgacuma.github.io/match-tracker-client/" target="_blank"><span>View Project</span></a>
+              <a href="https://mgacuma.github.io/match-tracker/" target="_blank"><span>View Project</span></a>
               <a href="https://github.com/mgacuma/match-tracker" target="_blank"><span>View Code</span></a>
             </div>
             <div className="overlay" />
@@ -51,8 +51,8 @@ const Projects: React.FC = () => {
           <div className="project-img">
             <img src="./web.png" />
             <div className="project-cta img">
-              <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation-main/" target="_blank"><span>View Project</span></a>
-              <a href="https://github.com/mgacuma/intro-section-with-dropdown-navigation-main" target="_blank"><span>View Code</span></a>
+              <a href="https://mgacuma.github.io/intro-section-with-dropdown-navigation/" target="_blank"><span>View Project</span></a>
+              <a href="https://github.com/mgacuma/intro-section-with-dropdown-navigation" target="_blank"><span>View Code</span></a>
             </div>
             <div className="overlay" />
           </div>
