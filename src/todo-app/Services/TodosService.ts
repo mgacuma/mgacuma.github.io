@@ -7,7 +7,7 @@ export class ApiService {
 
     constructor(){
         this.axiosInstance = axios.create({
-            baseURL: 'https://074a-2600-1700-9778-d210-b515-180-8ef9-2126.ngrok-free.app/todos',
+            baseURL: 'https://ab73-2600-1700-9778-d210-d55c-4fea-67ec-eb28.ngrok-free.app/todos',
             timeout: 1000,
             headers: {'Content-Type': 'application/json'}
         })
