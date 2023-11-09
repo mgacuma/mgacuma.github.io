@@ -52,13 +52,17 @@
     cursor: pointer;
 }
 
+.profile-cta a:first-of-type {
+    margin-right: 16px;
+}
+
 .profile-cta a:hover {
     color: var(--green);
 }
 
-.profile-cta a:visited {
-    color: var(--white);
-}
+a, a:visited, a:active {
+    color: inherit;
+  }
 
 .img-portrait {
     width: 100%;

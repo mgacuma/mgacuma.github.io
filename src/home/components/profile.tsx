@@ -22,7 +22,8 @@ const Profile: React.FC = () => {
           </p>
         </div>
 
-        <div className="profile-cta ">
+        <div className="profile-cta">
+          <span>
           <a 
             onClick={(e => {
               e.preventDefault();
@@ -38,6 +39,15 @@ const Profile: React.FC = () => {
           >
             Contact Me
           </a>
+          </span>
+          <span>
+          <a
+          href="path_to_file"
+          download='./resume-miguel-gacuma.pdf'
+          >
+            Download Resume
+          </a>
+          </span>
         </div>
         
       </div>
