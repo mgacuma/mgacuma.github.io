@@ -13,7 +13,7 @@ const QuizApp: React.FC<QuizAppProps> = React.memo(({}) => {
   const { questions, score, selectAnswer, time, showAnswer} = useQuiz();
 
   return (
-    <Box className="QuizApp" >
+    <Box className="QuizApp" sx={{backgroundColor: '#f2f2f2', py: 1}} >
       <UtilsBox 
         score={score} 
         time={time} 

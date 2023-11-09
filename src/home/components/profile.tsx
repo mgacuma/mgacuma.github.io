@@ -1,42 +1,60 @@
+import { Image } from "@mui/icons-material"
 import { Grid, Box, Typography, Container, Divider } from "@mui/material"
+
+import "../styles/profile.css";
 
 const Profile: React.FC = () => {
   return (
-    <Grid container className="Profile" justifyContent="center" paddingY={8} style={{backgroundColor: "#27323d", color: "white"}}>
-              
-              <Grid item container sm={5} xs={12} justifyContent={{xs: "center", md: "flex-end"}}>
-                <Grid item>
-                  <Box
-                    component="img"
-                    padding={2}
-                    sx={{
-                      maxHeight: {xs: 281, sm: 295},
-                      maxWidth: {xs: 281, sm: 295}
-                    }}
-                    alt="Profile picture"
-                    src="https://i.ibb.co/SxCdQYN/123-AC1-DC-B8-C1-4-BEE-BBC7-81-AF08-AC8414-1-105-c-cropped.png"
-                  />
-                </Grid>
-              </Grid>
+    <div className="profile-container ">
 
-              <Grid item sm={7} xs={12} container direction="column" justifyContent="flex-start" alignContent={{xs: "center", md: "flex-start"}} padding={2}  spacing={1} >
-                <Grid item >
-                  <Typography variant="h3">Miguel Gacuma</Typography>
-                </Grid>
-                <Grid item >
-                  <Divider sx={{backgroundColor: "white", borderBottomWidth: 2}} />
-                </Grid>
-                <Grid item >
-                  <Typography component="h4">Millbrae, CA, 94030</Typography>
-                </Grid>
-                <Grid item >
-                  <Typography component="h4">415-613-5666</Typography>
-                </Grid>
-                <Grid item >
-                  <Typography component="h4">miguel.gacuma@outlook.com</Typography>
-                </Grid>
-              </Grid>
-    </Grid>
+      <div className="profile-content ">
+
+        <img className="img-portrait-mobile" src="./portrait-full.jpeg" />
+
+        <div className="profile-header">
+          <h1>Kamusta!</h1>
+          <h1>I'm <span className="name-text">Miguel Gacuma</span>.</h1>
+        </div>
+
+        <div className="profile-body">
+          <p>
+            Based in San Francisco, I'm a full-stack developer passionate about building intuitive tools to make everyone's lives easier.
+          </p>
+        </div>
+
+        <div className="profile-cta">
+          <span>
+          <a 
+            onClick={(e => {
+              e.preventDefault();
+
+              const contact = document.getElementById('contact');
+              contact?.scrollIntoView({
+                  block: 'start',
+                  behavior: 'smooth',
+                  inline: 'start'
+                })
+              }
+            )}
+          >
+            Contact Me
+          </a>
+          </span>
+          <span>
+          <a
+          href="path_to_file"
+          download='./resume-miguel-gacuma.pdf'
+          >
+            Download Resume
+          </a>
+          </span>
+        </div>
+        
+      </div>
+
+      <img className="img-portrait" src="./professional.jpeg" />
+
+    </div>
   )
 }
 

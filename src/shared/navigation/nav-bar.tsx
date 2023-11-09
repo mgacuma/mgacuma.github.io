@@ -1,66 +1,102 @@
-import { AppBar, Box, Button, Container, Divider, Drawer, Grid, IconButton, List, ListItem, Menu, MenuItem, Paper, Toolbar, Typography } from "@mui/material";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedinIcon from '@mui/icons-material/LinkedIn'
 import MenuIcon from '@mui/icons-material/Menu'
-import React, { ReactElement, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
-import { NavLinks } from "./nav-links";
+import { useLocation, Link } from "react-router-dom";
 import NavToTop from "./nav-to-top";
+import { useState } from "react";
+import { AppBar, Box, Container, Grid, Tabs, Tab, Button, Drawer, Typography, Link as MLink } from '@mui/material';
 
-interface NavBarProps {
-
-}
-
-const NavBar: React.FC<NavBarProps> = ({}) => {
-  const [drawer, setDrawer] = useState<boolean>(false);
+export function NavBar() {
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <AppBar position="sticky" style={{ backgroundColor: "white" }}>
-        <Toolbar>
+    <AppBar position="sticky" sx={{backgroundColor:'transparent'}}>
+      <Box display={{xs: 'none', sm: 'inherit'}} pt={'1.5vh'} sx={{height: '6vh'}}>
+        <Grid container spacing={1}>
+          <Grid item xs={6}>
+            <Box width='80%' textAlign='center'>
+              <MLink underline='none' component={Link} to={'/'} variant='h4'>
+                mgacuma
+              </MLink>
 
-          <NavLinks />
+            </Box>
+          </Grid>
+
+          <Grid item xs={6}>
+            <Tabs
+              value={
+                useLocation().pathname
+              }
+              centered
+            >
+              <Tab
+                disableRipple
+                value='/'
+                label="Home"
+                component={Link}
+                to={'/'}
+              />
+              <Tab
+                disableRipple
+                value='/todo-app'
+                label="Todo App"
+                component={Link}
+                to='/todo-app'
+              />
+              <Tab
+                disableRipple
+                value='/quiz-app'
+                label="Quiz App"
+                component={Link}
+                to='/quiz-app'
+              />
+            </Tabs>
+          </Grid>
+        </Grid>
+      </Box>
+      
           
-          <Box display={{xs: 'flex', sm: 'none'}} sx={{height: 64}}>
-            <Button onClick={e => setDrawer(!drawer)} sx={{color: '#27323d'}}>
-              <MenuIcon fontSize="large" />
-            </Button>
+      <Box display={{xs: 'flex', sm: 'none'}} sx={{height: '5vh'}}>
+        <Button onClick={e => setOpen(!open)} color='primary'>
+          <MenuIcon fontSize="large" />
+        </Button>
+                  
+        <Box width='80%' pt='1vh' textAlign='center'>
+            <Typography variant='h4' color='#27323d'>
+              Hire Me Maybe
+            </Typography>
+        </Box>
+      </Box>
 
-            <Drawer open={drawer} anchor='left' onClose={() => setDrawer(false)}>
+      
 
-                <Box paddingX={2}>
-                  <Link to="/hq/" onClick={() => {setDrawer(false)}} style={{textDecoration: 'none', color: '#27323d'}}><Typography paddingY={1} variant="h4">Home</Typography></Link>
-                  <Divider />
-                  <Link to="/hq/todo-app" onClick={() => {setDrawer(false)}} style={{textDecoration: 'none', color: '#27323d'}}><Typography variant="h4">Todo App</Typography></Link>
-                  <Divider />
-                  <Link to="/hq/quiz-app" onClick={() => {setDrawer(false)}} style={{textDecoration: 'none', color: '#27323d'}}><Typography paddingY={1} variant="h4">Quiz App</Typography></Link>
-                  <Divider />
-                </Box>
+      <Drawer open={open} anchor='left' onClose={() => setOpen(false)}>
+        <Tabs
+          orientation='vertical'
+          value={
+            useLocation().pathname
+          }
+        >
+          <Tab
+            value='/'
+            label="Home"
+            component={Link}
+            to={'/'}
+          />
+          <Tab
+            value='/todo-app'
+            label="Todo App"
+            component={Link}
+            to='/todo-app'
+          />
+          <Tab
+            value='/quiz-app'
+            label="Quiz App"
+            component={Link}
+            to='/quiz-app'
+          />
+        </Tabs>
+      </Drawer>
 
-                  <Box justifyContent={'center'} paddingY={1} paddingX={2} alignItems='center'>
-                    <Link to="https://github.com/mgacuma" rel="noopener noreferrer" target="_blank">
-                      <GitHubIcon  sx={{color: '#27323d'}}/> 
-                    </Link>
-                    <Link to="https://linkedin.com/in/mgacuma" rel="noopener noreferrer" target="_blank">
-                      <LinkedinIcon sx={{color: '#27323d'}}/>
-                    </Link>
-                  </Box>
-            </Drawer>
-          </Box>
-
-          <Typography sx={{
-              mr: 2,
-              display: { xs: 'flex', sm: 'none' },
-              flexGrow: 1,
-              fontSize: 28,
-              letterSpacing: '.007rem',
-              color: '#27323d',
-              textDecoration: 'none',
-            }}>
-            {'Hire Me Maybe'}
-          </Typography>
-
-        </Toolbar>
-        <NavToTop />
+      <NavToTop />
     </AppBar>
   )
 }
