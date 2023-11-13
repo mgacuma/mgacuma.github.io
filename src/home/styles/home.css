@@ -6,3 +6,7 @@
     --white: #ffffff;
     --red: #FF6F5B;
 }
+
+body {
+    overscroll-behavior: none;
+}
