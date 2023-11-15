@@ -27,7 +27,6 @@ export const useTodos = () => {
   useEffect(() => {
     api.getAllTodos()
     .then(data => {
-      console.log(data)
       setTodos(data)
     })
   }, [])
