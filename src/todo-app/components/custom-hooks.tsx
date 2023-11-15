@@ -27,6 +27,7 @@ export const useTodos = () => {
   useEffect(() => {
     api.getAllTodos()
     .then(data => {
+      console.log(data)
       setTodos(data)
     })
   }, [])
@@ -36,25 +37,25 @@ export const useTodos = () => {
 
     addTodo: (text: string) => {
       if (text !== "") {
-        api.addTodo({text, completed: false})
-        .then(data => {
-          setTodos([data!, ...todos])
-        });
+        const todo = {id: Date.now().toString(), text, completed: false}
+        api.addTodo(todo)
+          .then(data => {
+            setTodos([...todos, todo])
+          });
       }
     },
 
     toggleTodo: (todo: Todo) => {
       api.toggleTodo(todo)
-      .then(data => {
-        const updatedTodos = todos.map(todo => {
-          if (todo.id === data.id) {
-            return { ...todo, completed: !todo.completed };
-          }
-          return todo;
-        });
-
-        setTodos(updatedTodos);
-      });
+        .then(data => {
+          setTodos(todos.map(oldTodo => {
+            if(todo.id === oldTodo.id){
+              oldTodo = {...oldTodo, completed: !oldTodo.completed}
+            }
+            return oldTodo;
+          }))
+        })
+        .catch(() => setTodos(todos));
     },
 
     removeTodo: (todo: Todo) => {

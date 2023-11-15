@@ -7,17 +7,23 @@ export class ApiService {
 
     constructor(){
         this.axiosInstance = axios.create({
-            baseURL: 'https://ab73-2600-1700-9778-d210-d55c-4fea-67ec-eb28.ngrok-free.app/todos',
+            baseURL: 'https://xyoxs6skdc.execute-api.us-west-1.amazonaws.com/default/',
             timeout: 1000,
-            headers: {'Content-Type': 'application/json'}
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json'
+            }
         })
     }
 
-    async addTodo(todo: {text: string, completed: boolean}){
+    async addTodo(todo: Todo){
         try{
             const { data } = await this.axiosInstance.post(
-                '/new-todo',
-                todo 
+                '/',
+                {
+                    todo: todo,
+                    jobType: 'create' 
+                }
             )
             return data as Todo
         }catch(error){
@@ -28,8 +34,11 @@ export class ApiService {
     async toggleTodo(todo: Todo){
         try{
             const { data } = await this.axiosInstance.post(
-                `/toggle-todo`,
-                todo
+                `/`,
+                {
+                    todo: {...todo, completed: !todo.completed},
+                    jobType: 'update'
+                }
             )
             return data
         }catch(error){
@@ -39,8 +48,8 @@ export class ApiService {
 
     async getAllTodos() {
         try{
-            const { data } = await this.axiosInstance.post(
-                '/get-todos');
+            const { data } = await this.axiosInstance.get('/');
+            console.log(data)
             return data;
         }catch(error) {
             return [];
@@ -50,12 +59,11 @@ export class ApiService {
     async deleteTodo(todo: Todo){
         try{
             await this.axiosInstance.post(
-                `/delete-todo`,
-                todo, 
+                `/`,
+                {todo: todo, jobType: 'delete'}
             )
-    
             return await this.getAllTodos()
-        }catch(error){
+        } catch(error){
             
         }
     }
