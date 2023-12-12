@@ -42,7 +42,7 @@ const Profile: React.FC = () => {
           </span>
           <span>
           <a
-          href="path_to_file"
+          href="./resume-miguel-gacuma.pdf"
           download='./resume-miguel-gacuma.pdf'
           >
             Download Resume
